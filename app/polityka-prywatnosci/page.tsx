@@ -18,14 +18,14 @@ export default function PrivacyPolicyPage() {
       <section>
         <h2>Administrator danych</h2>
         <p>
-          Administratorem danych osobowych jest All4biz. Dane identyfikacyjne,
-          adresowe i rejestrowe zostaną uzupełnione po ich finalnym
-          potwierdzeniu.
+          Administratorem danych osobowych jest ALL4BIZ spółka z ograniczoną
+          odpowiedzialnością z siedzibą w Częstochowie.
         </p>
         <ul>
-          <li>E-mail: [do uzupełnienia]</li>
-          <li>Adres: [do uzupełnienia]</li>
-          <li>NIP / REGON / KRS: [do uzupełnienia]</li>
+          <li>E-mail: info@all4biz.pl</li>
+          <li>Adres: ul. Żyzna 58F, 42-200 Częstochowa</li>
+          <li>NIP: 5732944482</li>
+          <li>KRS: 0001043627</li>
         </ul>
       </section>
 

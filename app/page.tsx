@@ -83,10 +83,11 @@ const practicalWork = [
 ];
 
 const contactDetails = [
-  "E-mail: [do uzupełnienia]",
-  "Telefon: [do uzupełnienia]",
-  "Adres: [do uzupełnienia]",
-  "NIP / REGON / KRS: [do uzupełnienia]",
+  "E-mail: info@all4biz.pl",
+  "Telefon: +48 608 376 200",
+  "Adres: ul. Żyzna 58F, 42-200 Częstochowa",
+  "NIP: 5732944482",
+  "KRS: 0001043627",
   "LinkedIn: [do uzupełnienia]",
 ];
 
@@ -166,7 +167,7 @@ export default function Home() {
 
         <div className="hero-visual">
           <Image
-            src="/images/all4biz-architecture.png"
+            src="/images/all4biz-architecture-v2.png"
             alt="Nowoczesna architektura biurowa z subtelnymi liniami połączeń"
             width={1536}
             height={1024}
@@ -257,7 +258,7 @@ export default function Home() {
       <section className="section image-band" aria-labelledby="why-title">
         <Image
           className="band-photo"
-          src="/images/all4biz-venue.png"
+          src="/images/all4biz-venue-v2.png"
           alt=""
           aria-hidden="true"
           width={1536}
@@ -322,7 +323,7 @@ export default function Home() {
             text="Jeżeli masz projekt, zapytanie lub szukasz partnera do rozmowy o możliwościach biznesowych, skontaktuj się z nami."
           />
           <address className="contact-card">
-            <strong>All4biz</strong>
+            <strong>ALL4BIZ sp. z o.o.</strong>
             {contactDetails.map((detail) => (
               <span key={detail}>{detail}</span>
             ))}
@@ -349,8 +350,12 @@ export default function Home() {
             <a href="#kontakt">Kontakt</a>
           </nav>
           <div className="footer-contact">
-            <span>E-mail: [do uzupełnienia]</span>
-            <span>Telefon: [do uzupełnienia]</span>
+            <span>ALL4BIZ sp. z o.o.</span>
+            <span>ul. Żyzna 58F, 42-200 Częstochowa</span>
+            <span>NIP: 5732944482</span>
+            <span>KRS: 0001043627</span>
+            <span>E-mail: info@all4biz.pl</span>
+            <span>Telefon: +48 608 376 200</span>
           </div>
         </div>
         <nav className="section-shell legal-links" aria-label="Informacje prawne">

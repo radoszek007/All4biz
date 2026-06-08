@@ -70,7 +70,9 @@ export default function TermsPage() {
         <h2>Kontakt w sprawach serwisu</h2>
         <p>
           W sprawach dotyczących działania serwisu, treści lub kwestii prawnych
-          można skontaktować się z All4biz pod adresem: [do uzupełnienia].
+          można skontaktować się z ALL4BIZ sp. z o.o., ul. Żyzna 58F, 42-200
+          Częstochowa, KRS: 0001043627, NIP: 5732944482, e-mail:
+          info@all4biz.pl.
         </p>
       </section>
 

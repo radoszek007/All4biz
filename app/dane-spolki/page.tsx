@@ -11,27 +11,35 @@ export default function CompanyDataPage() {
     <main className="legal-page">
       <LegalHeader
         title="Dane spółki"
-        lead="Podstawowe dane identyfikacyjne i kontaktowe All4biz zostaną uzupełnione po ich finalnym potwierdzeniu."
+        lead="Podstawowe dane identyfikacyjne i kontaktowe ALL4BIZ spółka z ograniczoną odpowiedzialnością."
       />
 
       <section>
-        <h2>All4biz</h2>
+        <h2>ALL4BIZ sp. z o.o.</h2>
         <dl className="legal-data-list">
           <div>
+            <dt>Pełna nazwa</dt>
+            <dd>ALL4BIZ spółka z ograniczoną odpowiedzialnością</dd>
+          </div>
+          <div>
             <dt>E-mail</dt>
-            <dd>[do uzupełnienia]</dd>
+            <dd>info@all4biz.pl</dd>
           </div>
           <div>
             <dt>Telefon</dt>
-            <dd>[do uzupełnienia]</dd>
+            <dd>+48 608 376 200</dd>
           </div>
           <div>
             <dt>Adres</dt>
-            <dd>[do uzupełnienia]</dd>
+            <dd>ul. Żyzna 58F, 42-200 Częstochowa</dd>
           </div>
           <div>
-            <dt>NIP / REGON / KRS</dt>
-            <dd>[do uzupełnienia]</dd>
+            <dt>NIP</dt>
+            <dd>5732944482</dd>
+          </div>
+          <div>
+            <dt>KRS</dt>
+            <dd>0001043627</dd>
           </div>
           <div>
             <dt>LinkedIn</dt>
@@ -43,9 +51,7 @@ export default function CompanyDataPage() {
       <section>
         <h2>Uwagi</h2>
         <p>
-          Dane w tej sekcji należy uzupełnić przed publicznym uruchomieniem
-          serwisu, zgodnie z rzeczywistą formą prawną, wpisem rejestrowym oraz
-          sposobem prowadzenia działalności.
+          Profil LinkedIn należy uzupełnić po jego finalnym potwierdzeniu.
         </p>
       </section>
 
