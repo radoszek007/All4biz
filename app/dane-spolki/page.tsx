@@ -41,18 +41,7 @@ export default function CompanyDataPage() {
             <dt>KRS</dt>
             <dd>0001043627</dd>
           </div>
-          <div>
-            <dt>LinkedIn</dt>
-            <dd>[do uzupełnienia]</dd>
-          </div>
         </dl>
-      </section>
-
-      <section>
-        <h2>Uwagi</h2>
-        <p>
-          Profil LinkedIn należy uzupełnić po jego finalnym potwierdzeniu.
-        </p>
       </section>
 
       <LegalFooter />

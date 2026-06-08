@@ -88,7 +88,6 @@ const contactDetails = [
   "Adres: ul. Żyzna 58F, 42-200 Częstochowa",
   "NIP: 5732944482",
   "KRS: 0001043627",
-  "LinkedIn: [do uzupełnienia]",
 ];
 
 function Header() {
