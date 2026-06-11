@@ -16,7 +16,7 @@ const cooperationAreas = [
   },
   {
     title: "Bezpieczeństwo osobiste",
-    text: "Rozwijamy współpracę w obszarze szkoleń, profilaktyki, bezpieczeństwa pracowników oraz praktycznego przygotowania do sytuacji podwyższonego ryzyka.",
+    text: "Rozwijamy współpracę w obszarze szkoleń, profilaktyki, odporności na stres oraz praktycznego przygotowania pracowników do sytuacji podwyższonego ryzyka.",
   },
   {
     title: "Edukacja i rozwój kompetencji",
@@ -231,6 +231,35 @@ export default function Home() {
                 <p>{area.text}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="section section-shell own-project"
+        aria-labelledby="resilium-title"
+      >
+        <div className="own-project-panel">
+          <div>
+            <p className="eyebrow">Projekt własny</p>
+            <h2 id="resilium-title">Resilium — system trenowanych reakcji</h2>
+          </div>
+          <div className="own-project-copy">
+            <p>
+              Resilium to projekt All4biz rozwijany w obszarze odporności,
+              bezpieczeństwa osobistego i praktycznego przygotowania do
+              działania pod presją. Program koncentruje się na trenowaniu
+              reakcji, które pozostają dostępne w sytuacjach stresu, napięcia
+              lub podwyższonego ryzyka.
+            </p>
+            <a
+              className="button button-secondary"
+              href="https://www.resilium.pl/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Zobacz projekt Resilium
+            </a>
           </div>
         </div>
       </section>

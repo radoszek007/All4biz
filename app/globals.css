@@ -394,6 +394,40 @@ h3 {
   color: var(--text-muted);
 }
 
+.own-project {
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+
+.own-project-panel {
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: 56px;
+  align-items: start;
+  padding: 42px;
+  border: 1px solid rgba(255, 96, 16, 0.24);
+  background:
+    linear-gradient(135deg, rgba(255, 95, 18, 0.12), rgba(255, 255, 255, 0.035)),
+    rgba(18, 18, 17, 0.9);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.own-project h2 {
+  max-width: 560px;
+  font-size: clamp(2rem, 3.4vw, 3.45rem);
+}
+
+.own-project-copy {
+  display: grid;
+  gap: 28px;
+  color: var(--text-muted);
+  font-size: 1.04rem;
+}
+
+.own-project-copy .button {
+  justify-self: start;
+}
+
 .process-list {
   display: grid;
   gap: 16px;
@@ -710,6 +744,7 @@ h3 {
 
   .hero,
   .two-column,
+  .own-project-panel,
   .contact-layout {
     grid-template-columns: 1fr;
     gap: 44px;
@@ -838,6 +873,7 @@ h3 {
 
   .highlight-box,
   .audience-panel,
+  .own-project-panel,
   .contact-card,
   .final-cta,
   .legal-header,
