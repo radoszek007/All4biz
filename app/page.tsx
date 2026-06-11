@@ -82,6 +82,33 @@ const practicalWork = [
   "rozwijamy relacje między firmami, instytucjami i dostawcami",
 ];
 
+const resiliumOpinions = [
+  {
+    company: "Dawid Purgal Consulting",
+    label: "opinia uczestnika programu",
+    quote:
+      "Sama wiedza często nie jest wystarczająca. Kluczowe znaczenie ma umiejętność zachowania orientacji i stabilności emocjonalnej.",
+  },
+  {
+    company: "Kolorowa Ściana / Global Horizon Group s.c.",
+    label: "list referencyjny",
+    quote:
+      "Szczególnie doceniam praktyczny charakter programu oraz połączenie pracy ze stresem, ciałem i podejmowaniem decyzji pod presją.",
+  },
+  {
+    company: "Kserograf.pl",
+    label: "opinia uczestnika programu",
+    quote:
+      "Najbardziej wartościowe było połączenie pracy z ciałem, oddechem, uwagą i komunikacją.",
+  },
+  {
+    company: "BENUGO / Bocian",
+    label: "opinia uczestnika programu",
+    quote:
+      "Wiedzę i narzędzia można realnie wykorzystać w środowisku zawodowym oraz w pracy pod presją.",
+  },
+];
+
 const contactDetails = [
   "E-mail: info@all4biz.pl",
   "Telefon: +48 608 376 200",
@@ -119,15 +146,17 @@ function SectionHeading({
   eyebrow,
   title,
   text,
+  titleId,
 }: {
   eyebrow?: string;
   title: string;
   text?: string;
+  titleId?: string;
 }) {
   return (
     <div className="section-heading">
       {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-      <h2>{title}</h2>
+      <h2 id={titleId}>{title}</h2>
       {text ? <p>{text}</p> : null}
     </div>
   );
@@ -260,6 +289,67 @@ export default function Home() {
             >
               Zobacz projekt Resilium
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="resilium-opinie"
+        className="section testimonials-section"
+        aria-labelledby="resilium-opinions-title"
+      >
+        <div className="section-shell testimonials-layout">
+          <div className="testimonials-content">
+            <SectionHeading
+              eyebrow="Opinie"
+              titleId="resilium-opinions-title"
+              title="Opinie o projekcie Resilium"
+              text="Wybrane opinie uczestników i partnerów pokazują praktyczny charakter programu Resilium oraz jego zastosowanie w pracy pod presją, komunikacji, zarządzaniu i bezpieczeństwie osobistym."
+            />
+            <div className="testimonial-grid">
+              {resiliumOpinions.map((opinion) => (
+                <article className="testimonial-card" key={opinion.company}>
+                  <span className="testimonial-label">{opinion.label}</span>
+                  <blockquote>{opinion.quote}</blockquote>
+                  <p>{opinion.company}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="document-stack" aria-hidden="true">
+            <Image
+              className="document-preview document-preview-primary"
+              src="/images/references/resilium-opinia-dpk.jpg"
+              alt=""
+              width={560}
+              height={780}
+              sizes="(max-width: 980px) 34vw, 15vw"
+            />
+            <Image
+              className="document-preview document-preview-secondary"
+              src="/images/references/resilium-opinia-kolorowa.jpg"
+              alt=""
+              width={560}
+              height={780}
+              sizes="(max-width: 980px) 34vw, 15vw"
+            />
+            <Image
+              className="document-preview document-preview-tertiary"
+              src="/images/references/resilium-opinia-kserograf.jpg"
+              alt=""
+              width={560}
+              height={780}
+              sizes="(max-width: 980px) 34vw, 15vw"
+            />
+            <Image
+              className="document-preview document-preview-quaternary"
+              src="/images/references/resilium-opinia-bocian.jpg"
+              alt=""
+              width={560}
+              height={780}
+              sizes="(max-width: 980px) 34vw, 15vw"
+            />
           </div>
         </div>
       </section>

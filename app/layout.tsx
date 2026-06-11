@@ -52,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={montserrat.variable}>
+      <body className={montserrat.variable} style={{ isolation: "isolate" }}>
         {children}
       </body>
     </html>
