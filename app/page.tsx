@@ -84,28 +84,54 @@ const practicalWork = [
 
 const resiliumOpinions = [
   {
+    id: "dpk",
     company: "Dawid Purgal Consulting",
     label: "opinia uczestnika programu",
     quote:
       "Sama wiedza często nie jest wystarczająca. Kluczowe znaczenie ma umiejętność zachowania orientacji i stabilności emocjonalnej.",
+    preview: "/images/references/resilium-opinia-dpk.jpg",
+    original: "/images/references/originals/resilium-opinia-dpk-original.jpg",
+    originalWidth: 1535,
+    originalHeight: 2200,
+    previewClass: "document-preview-primary",
   },
   {
+    id: "kolorowa",
     company: "Kolorowa Ściana / Global Horizon Group s.c.",
     label: "list referencyjny",
     quote:
       "Szczególnie doceniam praktyczny charakter programu oraz połączenie pracy ze stresem, ciałem i podejmowaniem decyzji pod presją.",
+    preview: "/images/references/resilium-opinia-kolorowa.jpg",
+    original:
+      "/images/references/originals/resilium-opinia-kolorowa-original.jpg",
+    originalWidth: 2550,
+    originalHeight: 3507,
+    previewClass: "document-preview-secondary",
   },
   {
+    id: "kserograf",
     company: "Kserograf.pl",
     label: "opinia uczestnika programu",
     quote:
       "Najbardziej wartościowe było połączenie pracy z ciałem, oddechem, uwagą i komunikacją.",
+    preview: "/images/references/resilium-opinia-kserograf.jpg",
+    original:
+      "/images/references/originals/resilium-opinia-kserograf-original.jpg",
+    originalWidth: 1555,
+    originalHeight: 2200,
+    previewClass: "document-preview-tertiary",
   },
   {
+    id: "bocian",
     company: "BENUGO / Bocian",
     label: "opinia uczestnika programu",
     quote:
       "Wiedzę i narzędzia można realnie wykorzystać w środowisku zawodowym oraz w pracy pod presją.",
+    preview: "/images/references/resilium-opinia-bocian.jpg",
+    original: "/images/references/originals/resilium-opinia-bocian-original.jpg",
+    originalWidth: 2200,
+    originalHeight: 1882,
+    previewClass: "document-preview-quaternary",
   },
 ];
 
@@ -317,41 +343,66 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="document-stack" aria-hidden="true">
-            <Image
-              className="document-preview document-preview-primary"
-              src="/images/references/resilium-opinia-dpk.jpg"
-              alt=""
-              width={560}
-              height={780}
-              sizes="(max-width: 980px) 34vw, 15vw"
-            />
-            <Image
-              className="document-preview document-preview-secondary"
-              src="/images/references/resilium-opinia-kolorowa.jpg"
-              alt=""
-              width={560}
-              height={780}
-              sizes="(max-width: 980px) 34vw, 15vw"
-            />
-            <Image
-              className="document-preview document-preview-tertiary"
-              src="/images/references/resilium-opinia-kserograf.jpg"
-              alt=""
-              width={560}
-              height={780}
-              sizes="(max-width: 980px) 34vw, 15vw"
-            />
-            <Image
-              className="document-preview document-preview-quaternary"
-              src="/images/references/resilium-opinia-bocian.jpg"
-              alt=""
-              width={560}
-              height={780}
-              sizes="(max-width: 980px) 34vw, 15vw"
-            />
+          <div
+            className="document-stack"
+            aria-label="Oryginalne dokumenty referencyjne"
+          >
+            <p className="document-stack-hint">Kliknij dokument, aby powiększyć</p>
+            {resiliumOpinions.map((opinion) => (
+              <a
+                className={`document-link ${opinion.previewClass}`}
+                href={`#opinia-${opinion.id}`}
+                aria-label={`Powiększ dokument referencyjny: ${opinion.company}`}
+                key={opinion.id}
+              >
+                <Image
+                  className="document-preview"
+                  src={opinion.preview}
+                  alt=""
+                  width={560}
+                  height={780}
+                  sizes="(max-width: 980px) 34vw, 15vw"
+                />
+              </a>
+            ))}
           </div>
         </div>
+
+        {resiliumOpinions.map((opinion) => (
+          <aside
+            className="document-lightbox"
+            id={`opinia-${opinion.id}`}
+            aria-labelledby={`opinia-${opinion.id}-title`}
+            key={`${opinion.id}-lightbox`}
+          >
+            <a
+              className="document-lightbox-backdrop"
+              href="#resilium-opinie"
+              aria-label="Zamknij podgląd dokumentu"
+            />
+            <div className="document-lightbox-panel" role="dialog">
+              <div className="document-lightbox-header">
+                <div>
+                  <p className="eyebrow">Oryginał dokumentu</p>
+                  <h3 id={`opinia-${opinion.id}-title`}>{opinion.company}</h3>
+                </div>
+                <a className="document-lightbox-close" href="#resilium-opinie">
+                  Zamknij
+                </a>
+              </div>
+              <div className="document-lightbox-scroll">
+                <Image
+                  className="document-original"
+                  src={opinion.original}
+                  alt={`Oryginał dokumentu referencyjnego: ${opinion.company}`}
+                  width={opinion.originalWidth}
+                  height={opinion.originalHeight}
+                  sizes="(max-width: 760px) 96vw, 82vw"
+                />
+              </div>
+            </div>
+          </aside>
+        ))}
       </section>
 
       <section className="section section-shell" id="jak-pracujemy">
